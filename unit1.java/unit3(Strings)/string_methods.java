@@ -36,7 +36,7 @@ public class string_methods {
 		System.out.println(name.lastIndexOf("py"));
 		System.out.println(name.lastIndexOf("yar"));
 		System.out.println(name.lastIndexOf("rry",4));
-		System.out.println(nam.lastIndexOf("y",4));
+		System.out.println(name.lastIndexOf("y",4));
 		
 		System.out.println(a.equals("pRoGraMinG")); //12
 		System.out.println(a.equals("proGraMinG"));

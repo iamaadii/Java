@@ -143,6 +143,22 @@ public class Singly
         System.out.println("Element not found");
     }
 
+    void reverse()
+    {
+        Node prev = null;
+        Node current = head;
+        Node next = null;
+        while(current != null)
+        {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        } 
+        head = prev;
+        print();
+    }
+
     void print()
     {
         Node p = head;
@@ -175,8 +191,9 @@ public class Singly
         //s.deleteLast();
         //s.insertAtIndex(40,3);
         //s.deleteAtIndex(2);
-        s.search(10);
+        // s.search(10);
+        // System.out.println("size : " + size);
+        //s.reverse();
         s.print();
-        System.out.println("size : " + size);
     }
 }

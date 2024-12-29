@@ -52,6 +52,66 @@ public class Doubly
         }
     }
 
+    void deleteFirst()
+    {
+        if(head==null)
+        {
+            System.out.println("List is empty cannot delete");
+            return;
+        }
+        else if(head.next==null)
+        {
+            head = null;
+            return;
+        }
+        else
+        {
+            head = head.next;
+            head.prev = null;
+        }
+    }
+
+    void deleteLast()
+    {
+        if(head==null)
+        {
+            System.out.println("List is empty cannot delete");
+            return;
+        }
+        else if(head.next==null)
+        {
+            head = null;
+            return;
+        }
+        else
+        {
+            Node1 p = head.next;
+            while(p.next!=null)
+            {
+                p = p.next;
+            }
+            p.prev.next=null;
+        }
+    }
+
+    void reverse()
+    {
+        Node1 p = head;
+        Node1 q = null;
+        while(p!=null)
+        {
+            q = p;
+            p = p.next;
+        }
+        while(q!=null)
+        {
+            System.out.print(q.data+"->");
+            q = q.prev;
+        }
+        System.out.println("start");
+    }
+
+
     void display()
     {
         Node1 p = head;
@@ -67,7 +127,7 @@ public class Doubly
                 System.out.print(p.data+"->");
                 p = p.next;
             }
-            System.out.print("null");
+            System.out.print("end");
         }
     }
 
@@ -75,9 +135,13 @@ public class Doubly
     {
         Doubly d = new Doubly();
         d.addFirst(10);
-        d.addFirst(20);
+        d.addLast(20);
         d.addLast(30);
         d.addLast(40);
+        // d.deleteFirst();
+        //d.deleteLast();
         d.display();
+        System.out.print("\n");
+        d.reverse();
     }
 }

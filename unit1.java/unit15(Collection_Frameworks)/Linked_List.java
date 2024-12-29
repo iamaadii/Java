@@ -7,7 +7,7 @@ public class Linked_List
         LinkedList<Integer> l2 = new LinkedList<>();// We can not initialized it
 
         //Ways for adding
-        l2.add(10);
+        l2.add(10); // by default it will add at last
         l2.add(20);
         l1.add(0,7); // for adding element at particular index
         l1.addFirst(8); // for adding element at first index

@@ -27,17 +27,18 @@ public class PrimeNumber {
 
 
         //way2
-        int i;
-        for(i=2;i*i<n;i++)
+        int i=2;
+        while(i*i<=n)
         {
             if(n%i==0)
-            break;
+            {
+                System.out.println("not prime");
+                break;
+            }
+            i++;
         }
-        
         if(i*i>n)
             System.out.println("prime");
-        else  
-            System.out.println("not prime");
    
   }
 }
